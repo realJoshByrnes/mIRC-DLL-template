@@ -20,3 +20,5 @@ public:
 extern MIRCDLLTEMPLATE_API int nmIRCDLLtemplate;
 
 MIRCDLLTEMPLATE_API int fnmIRCDLLtemplate(void);
+
+MIRCDLLTEMPLATE_API int __stdcall foo(HWND mWnd, HWND aWnd, TCHAR* data, TCHAR* parms, BOOL show, BOOL nopause);

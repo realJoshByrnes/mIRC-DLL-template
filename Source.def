@@ -2,3 +2,4 @@
 EXPORTS
 	nmIRCDLLtemplate
 	fnmIRCDLLtemplate
+	foo

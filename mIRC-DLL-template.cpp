@@ -20,3 +20,8 @@ CmIRCDLLtemplate::CmIRCDLLtemplate()
 {
     return;
 }
+
+MIRCDLLTEMPLATE_API int __stdcall foo(HWND mWnd, HWND aWnd, char* data, char* parms, BOOL show, BOOL nopause) {
+    lstrcpyA(data, "bar");
+    return 3;
+}
