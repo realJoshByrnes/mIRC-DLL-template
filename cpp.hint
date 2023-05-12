@@ -1,0 +1,2 @@
+#define MIRCDLLTEMPLATE_API __declspec(dllexport)
+#define MIRCDLLTEMPLATE_API __declspec(dllimport)
