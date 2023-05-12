@@ -21,7 +21,7 @@ CmIRCDLLtemplate::CmIRCDLLtemplate()
     return;
 }
 
-MIRCDLLTEMPLATE_API int __stdcall foo(HWND mWnd, HWND aWnd, char* data, char* parms, BOOL show, BOOL nopause) {
-    lstrcpyA(data, "bar");
+MIRCDLLTEMPLATE_API int __stdcall foo(HWND mWnd, HWND aWnd, TCHAR *data, TCHAR *parms, BOOL show, BOOL nopause) {
+    lstrcpy(data, _T("bar"));
     return 3;
 }

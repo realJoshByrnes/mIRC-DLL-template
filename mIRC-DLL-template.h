@@ -10,6 +10,8 @@
 #define MIRCDLLTEMPLATE_API __declspec(dllimport)
 #endif
 
+#include <tchar.h>
+
 // This class is exported from the dll
 class MIRCDLLTEMPLATE_API CmIRCDLLtemplate {
 public:
