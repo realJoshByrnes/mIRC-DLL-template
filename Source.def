@@ -1,0 +1,4 @@
+﻿LIBRARY mIRC-DLL-template
+EXPORTS
+	nmIRCDLLtemplate
+	fnmIRCDLLtemplate
