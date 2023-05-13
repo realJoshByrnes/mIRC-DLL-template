@@ -33,3 +33,14 @@ alias dlltest {
 # Output file size
 
 While there may be some modications that you can make to the compiler settings to decrease the output binary size (feel free to contribute your findings), I have had success decreasing the binary size by using [UPX](https://github.com/upx/upx).
+
+```
+                       Ultimate Packer for eXecutables
+                          Copyright (C) 1996 - 2023
+UPX 4.0.2       Markus Oberhumer, Laszlo Molnar & John Reiser   Jan 30th 2023
+
+        File size         Ratio      Format      Name
+   --------------------   ------   -----------   -----------
+      8192 ->      6144   75.00%    win32/pe     mIRCDLLtemplate.dll
+     10240 ->      7168   70.00%    win64/pe     mIRCDLLtemplate.dll
+```
