@@ -82,9 +82,11 @@
     <TargetName>mIRCDLLtemplate</TargetName>
     <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <EmbedManifest>false</EmbedManifest>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <TargetName>mIRCDLLtemplate</TargetName>
+    <EmbedManifest>false</EmbedManifest>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
