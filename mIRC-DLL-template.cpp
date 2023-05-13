@@ -25,6 +25,12 @@ HWND  mHwnd;
 DWORD mBeta;
 DWORD mBytes;
 
+#ifdef _WIN64
+int mBits = 64;
+#else
+int mBits = 32;
+#endif
+
 MIRCDLLTEMPLATE_API void LoadDll(LOADINFO* li) {
     li->mKeep = true; // You can set mKeep to FALSE to make mIRC unload the DLL after the call.
 #ifdef _UNICODE
@@ -41,6 +47,6 @@ MIRCDLLTEMPLATE_API int UnloadDll(int mTimeout) {
 }
 
 MIRCDLLTEMPLATE_API int __stdcall foo(HWND mWnd, HWND aWnd, TCHAR *data, TCHAR *parms, BOOL show, BOOL nopause) {
-    _stprintf_s(data, mBytes, _T("DLL called on mIRC v%d.%d."), LOWORD(mVersion), HIWORD(mVersion));
+    _stprintf_s(data, mBytes, _T("%d-bit DLL called on mIRC v%d.%d."), mBits, LOWORD(mVersion), HIWORD(mVersion));
     return 3;
 }
