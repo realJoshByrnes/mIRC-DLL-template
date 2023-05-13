@@ -11,6 +11,7 @@
 #endif
 
 #include <tchar.h>
+#include "framework.h"
 
 typedef struct {
     DWORD mVersion;
