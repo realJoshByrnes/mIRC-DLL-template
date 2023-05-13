@@ -2,4 +2,6 @@
 EXPORTS
 	nmIRCDLLtemplate
 	fnmIRCDLLtemplate
+	LoadDll
+	UnloadDll
 	foo

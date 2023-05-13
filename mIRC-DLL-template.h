@@ -12,6 +12,15 @@
 
 #include <tchar.h>
 
+typedef struct {
+    DWORD mVersion;
+    HWND  mHwnd;
+    BOOL  mKeep;
+    BOOL  mUnicode;
+    DWORD mBeta;
+    DWORD mBytes;
+} LOADINFO;
+
 // This class is exported from the dll
 class MIRCDLLTEMPLATE_API CmIRCDLLtemplate {
 public:
