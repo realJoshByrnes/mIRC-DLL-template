@@ -1,5 +1,6 @@
 // mIRC-DLL-template.cpp : Defines the exported functions for the DLL.
 
+#include <cstdio>
 #include "mIRC-DLL-template.h"
 
 DWORD mVersion;
