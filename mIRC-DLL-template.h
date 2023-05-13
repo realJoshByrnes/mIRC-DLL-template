@@ -21,15 +21,13 @@ typedef struct {
     DWORD mBytes;
 } LOADINFO;
 
-// This class is exported from the dll
-class MIRCDLLTEMPLATE_API CmIRCDLLtemplate {
-public:
-	CmIRCDLLtemplate(void);
-	// TODO: add your methods here.
-};
-
-extern MIRCDLLTEMPLATE_API int nmIRCDLLtemplate;
-
-MIRCDLLTEMPLATE_API int fnmIRCDLLtemplate(void);
-
-MIRCDLLTEMPLATE_API int __stdcall foo(HWND mWnd, HWND aWnd, TCHAR* data, TCHAR* parms, BOOL show, BOOL nopause);
+#ifdef __cplusplus
+extern "C" { // only need to export C interface if
+             // used by C++ source code
+#endif
+    MIRCDLLTEMPLATE_API void WINAPI LoadDll(LOADINFO* li);
+    MIRCDLLTEMPLATE_API int WINAPI UnloadDll(int mTimeout);
+    MIRCDLLTEMPLATE_API int WINAPI foo(HWND mWnd, HWND aWnd, TCHAR* data, TCHAR* parms, BOOL show, BOOL nopause);
+#ifdef __cplusplus
+}
+#endif
